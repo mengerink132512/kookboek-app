@@ -1,0 +1,72 @@
+Enter file contents here1 <!DOCTYPE html> 
+2 <html lang="nl-nl"> 
+3 <head> 
+4 <title>Bestel app</title> 
+5 <style type="text/css"> 
+6     .buttonStyle { 
+7         margin-top: 300px; 
+8         background-color: white; 
+9         font-family: verdana; 
+10         font-weight: bold; 
+11         Color: black; 
+12         Width: 100px; 
+13     } 
+14  
+15     .buttonStyle:hover { 
+16         border: white; 
+17         background-color: black; 
+18         color: white; 
+19         cursor: default;     
+20     } 
+21     .buttonStyle:active { 
+22         border: white; 
+23         background-color: black; 
+24         color: white; 
+25         cursor: wait; 
+26     } 
+27 </style> 
+28 </head> 
+29 <style type="text/css"> 
+30     #AfterButton { 
+31     font-family: "Times New Roman"; 
+32     font-size: 300%; 
+33     font-weight: bold; 
+34     vertical-align: central; 
+35     text-align: center; 
+36     color: #41FAFF; 
+37     padding: 4cm; 
+38     background-image: url("http://static1.squarespace.com/static/52270212e4b0ce8e365484c8/t/55363110e4b0334035e9a074/1429614873594/background-food.jpg?format=1500w"); 
+39     background-repeat: no-repeat; 
+40     background-position: center; 
+41    
+42     }  
+43     .hidden-div { 
+44         display: none; 
+45     } 
+46 </style> 
+47 <body> 
+48         <div id="AfterButton"> 
+49             <p id="Uw bestelling is onderweg">Bestel app</p> 
+50             <button id="clickButton" class="buttonStyle" onClick = "this.style.visibility= 'hidden';"> Ga verder</button> 
+51         </div> 
+52         <script> 
+53             var myButton = document.getElementById("clickButton"); 
+54             var myText = document.getElementById("Uw bestelling is onderweg"); 
+55              
+56                 myButton.addEventListener('click', doSomething, false); 
+57              
+58         function doSomething() { 
+59 	        var invoer3 = prompt("welke gerecht wil u maken?"); 
+60 	        var invoer = prompt("Wat is het eerste ingredient dat u wilt gebruiken?"); 
+61 	        var invoer2 = prompt("Wat is het tweede ingredient dat u wilt gebruiken?"); 
+62 	        var invoer4 = prompt("voor hoeveel minuten gaat u dit mixen?"); 
+63 	            confirm("Weet u zeker dat " + invoer3 + " het gerecht is dat u wilt maken?"); 
+64 	            confirm("Weet u zeker dat u " + invoer + " als eerste ingredient wilt?"); 
+65 	        	confirm("Weet u zeker dat u " + invoer2 + " als tweede ingredient wilt?"); 
+66 	        	confirm("Weet u zeker dat u dat voor " + invoer4 + " minuten wilt mixen?"); 
+67 	        console.log(invoer); 
+68 	         myText.textContent = "Mix " + invoer + " met " + invoer2 + " voor " + invoer4 + " minuten. U heeft nu " + invoer3 + " gemaakt. bon apettit!"; 
+69         } 
+70     </script> 
+71     </body> 
+72 </html> 
